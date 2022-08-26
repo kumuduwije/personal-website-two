@@ -1,0 +1,560 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #160040;
+}
+
+/* background-image css */
+.top-area{
+    
+    height: 100vh;
+    /* width:200px; */
+    background-image: url("../images/bg-one.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+ 
+}
+/* background-image mobile css */
+@media only screen and (max-width: 375px){
+	/*Small smartphones [325px -> 425px]*/
+    .top-area{
+        height:100vh;
+        /* background-position: center ; */
+    }
+   
+    
+}
+
+
+/* Styling navbar */
+
+.logo{
+    z-index: 999;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 10px;
+    background:rgba(0, 0, 0, 0.3);
+ 
+    /* background-color: teal; */
+    color: #fff;
+}
+
+.navbar li{
+    list-style-type: none;
+}
+.navbar a{
+    text-decoration: none;
+}
+
+
+/* NAVBAR MENU */
+.menu ul {
+    display: flex;
+    gap: 1em;
+    font-size: 25px;
+}
+
+.menu ul li a{
+    color:white;
+    opacity: 0.9;
+}
+
+.menu ul li a:hover{
+    opacity: 1;
+}
+
+
+/* Navbar hover line effect */
+.link{
+    position: relative;
+  }
+
+.link:after{
+    content: '';
+    position: absolute;
+    width: 0; height: 3px;
+    display: block;
+    margin-top: 1px;
+    right: 0;
+    background: #79018C;
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+  }
+
+.link:hover:after{
+    width: 100%;
+    left: 0;
+    background: #79018C;
+  } 
+
+  /*End of Navbar hover line effect */
+
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+   } 
+   /*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+   /* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+
+    /* .navbar{
+        position: fixed;
+        width: 100%;
+    } */
+    .top-area{
+        background-position:center;
+    }
+
+   
+
+   .menu-items{ 
+    display:none;
+    position: absolute;
+    /* background:rgba(0, 0, 0, 0.3); */
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 28px 0;
+   }
+   
+   .menu-items ul{
+    /* margin-top: 24px; */
+    display: block;
+    background:rgba(0, 0, 0, 0.3);
+   }
+   .menu-items  li:hover {
+    display: inline-block;
+    transition: 0.3s ease;
+   }
+   .menu-items li + li {
+    margin-top: 12px;
+   }
+   input[type=checkbox]:checked ~ .menu-items{
+    display: block;
+   }
+
+   
+   .hamburger {
+    display: block;
+   }
+
+   .hamburger:hover{
+    cursor: pointer;
+   }
+
+   
+  
+}
+
+/* END OF THE NAVBAR STYLING */
+
+/* HERO SECTION */
+
+.hero-section{
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
+.hello{
+    color: #fff;
+    margin:0;
+    font-size:5vw;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Sacramento', cursive;
+}
+
+.my-name{
+    position:relative;
+    left: 50%;
+    transform: translate(-50%, -40%);  
+    margin:0;
+       
+}
+
+.my-name h1{
+    text-align: center;
+    font-size:60px;
+    font-weight: normal;
+    color: #fff;
+}
+.status{
+    width: 100%;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+    color: #fff;
+    margin:0;
+    /* font-size: 1vw; */
+}
+
+.work{
+    margin-top: 20px;
+}
+
+
+.hero-section a{
+    
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background-color: purple;
+    border-radius: 5px;
+    width: 150px;
+    margin: auto;
+    /* margin-top: 10px; */
+}
+
+.hero-section a:hover{
+    background-color: #79018C;
+}
+
+.slogan{
+    width: 100%;
+    color: #fff;
+    margin-top: 20px;
+    font-size:1.3vw;
+    font-weight: 200;
+}
+
+.slogan p{
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    .my-name{
+        /* position: static; */
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .my-name h1{
+        font-size:30px;
+    }
+    .hello{
+        font-size:50px;
+    }
+    .name{
+        font-size: 6vw;
+    }
+    .status{
+        font-size: 12px;
+    }
+    .slogan{
+        font-size: 20px;
+    }
+    .slogan p{
+        font-size:23px;
+    }
+   
+    
+  }
+
+/* ABOUT ME STYLING */
+
+.about-area{
+    margin-top: 20px;
+    /* height:100vh */
+}
+
+.about-area h1{
+    color: #fff;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+}
+/* custom horizontal rule */
+.divider{
+    margin: 0 auto;
+    width:120px;
+    padding:2px;
+    border-radius: 3px;
+    background-color: #79018C;
+}
+
+/* About area  */
+
+.about{
+    margin-top: 30px;
+    display:flex;
+    justify-content:center;
+    /* align-items:center */
+}
+
+
+.img{
+    padding:20px;
+}
+.img img{
+    border-radius: 50%;
+  /* height:200px; */
+  width:400px;
+  height:400px;
+}
+
+.description{
+    margin-top: 50px;
+    color: #fff;
+    padding:20px;
+    width:50%;
+}
+.description p {
+    font-weight: 200;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.ruler{
+    width:120px;
+    margin:0 auto;
+    border:none;
+    border-bottom: 10px dotted #79018C;
+    margin-bottom: 20px;
+    opacity: 0.4;
+}
+
+/* Query for About me section */
+@media screen and (max-width: 1000px) {
+    .img{
+        margin:0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .about{
+        display: block;
+        align-items: center;
+    }
+    .description  {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .description p {
+        font-size:25px;
+    }
+
+    .img img {
+        width:350px;
+        height:350px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 425px){
+	.img img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .description p {
+        font-size: 15px;
+    }
+    .ruler{
+        width:70px;
+        border-bottom: 10px dotted #79018C;
+    }
+}
+
+
+@media only screen and (max-width: 375px){
+	.img img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width:250px;
+        height:250px;
+    }
+    .description p {
+        font-size: 18px;
+    }
+    .ruler{
+        width:70px;
+        border-bottom: 10px dotted #79018C;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+	.img img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .description p {
+        font-size: 20px;
+        margin: 20px;
+    }
+    .about-area h1{
+        font-size: 35px;
+    }
+
+    .services-area h1{
+        font-size:35px;
+    }
+    /* .ruler{
+        width:80px;
+        border-bottom: 5px dotted #79018C;
+    } */
+}
+
+/* END OF THE ABOUT SECTION STYING */
+
+
+/* Services Styling */
+
+.services-area{
+    padding:20px;
+}
+
+.services{
+    display: flex;
+    justify-content: center;
+   margin-bottom: 30px;
+}
+
+.services-area h1{
+    color: #fff;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+}
+
+.web, .mobile, .ui-ux, .python{
+    margin-top: 30px;
+    border-radius: 10px;
+    width:300px;
+    height:280px;
+    background-color: #79018C;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.web{
+    margin-left: 50px;
+}
+.mobile{
+    margin-left: 50px;
+}
+
+.ui-ux{
+    margin-left: 50px;
+}
+.python{
+    margin-left: 50px;
+}
+
+
+.fa{
+    margin-top: 60px;
+    font-size:150px; 
+}
+
+
+/* hover effects */
+.web:hover{
+    box-shadow: 0 8px 16px 0 rgba(30, 30, 30, 0.2);
+    transform: scale(1.005);
+    cursor: pointer;
+}
+
+.python:hover{
+    box-shadow: 0 8px 16px 0 rgba(30, 30, 30, 0.2);
+    transform: scale(1.005);
+    cursor: pointer;
+}
+.mobile:hover{
+    box-shadow: 0 8px 16px 0 rgba(30, 30, 30, 0.2);
+    transform: scale(1.005);
+    cursor: pointer;
+    
+}
+
+.ui-ux:hover{
+    box-shadow: 0 8px 16px 0 rgba(30, 30, 30, 0.2);
+    transform: scale(1.005);
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px){
+    .services{
+        display: block;
+        margin:0 auto;
+        align-items: center;
+    }
+    .web, .mobile, .ui-ux, .python{
+        margin-left: 25px;
+        margin:auto;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    .web, .mobile, .ui-ux{
+        margin-left: 35px;
+    }
+
+    .web, .mobile, .ui-ux{
+        /* margin-left: 25px; */
+        margin:auto;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+	/*Small smartphones [325px -> 425px]*/
+    .web, .mobile, .ui-ux{
+        margin-left: 15px;
+    }
+    
+}
+
+
+/* @media only screen and (max-width: 375px){
+    
+    .web, .mobile, .ui-ux{
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 412px){
+    
+    .web, .mobile, .ui-ux{
+        margin-left: 35px;
+    }
+} */

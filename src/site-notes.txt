@@ -1,0 +1,26 @@
+background-colors 
+
+--HERO SECTION--
+#2b2354 --> blue shade
+#24203b
+#160040 ##curent use
+background-color: rgb(36, 32, 59);
+about me button color = #79018C
+
+background image link ->https://unsplash.com/photos/mP7aPSUm7aE
+
+
+Add a project section(python project, web dev project link here and upload to git)
+Add a service section when click, navigate to What i do
+
+
+https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ -- Responsive navbar link
+
+
+
+/////////projects section////////////
+
+web dev project (CW)
+python second sem project
+java 1st year final project
+
