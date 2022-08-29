@@ -3,10 +3,13 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #160040;
+    
 }
 
 /* background-image css */
@@ -218,6 +221,7 @@ input[type=checkbox]{
 
 .social-buttons .social-icons i{
     margin-top: 0;
+    font-size:45px;
 }
 
 
@@ -602,6 +606,7 @@ input[type=checkbox]{
 
 .footer-area{
     justify-content:center;
+    align-items:center;
     margin-top: 50px;
     background-color:#0E0029;
     height: 20vh;
@@ -628,12 +633,13 @@ input[type=checkbox]{
 
 .social-icons  li a{
     padding:10px; 
-    
+    padding-bottom:0;
 }
 
-.social-icons li a i{
+.footer-details .social-icons li a i{
     color:#A1A1A1;
     font-size:40px;
+    margin-top: 30px;
 }
 
 .social-icons  li a i:hover{
@@ -675,7 +681,9 @@ input[type=checkbox]{
     cursor: pointer;
     padding: 5px 10px;
     border-radius: 4px;
-  }
+
+}
+
 .topBtn i  {
     margin-top: 5px;
     font-size: 30px;

@@ -1,4 +1,10 @@
-
+#contact-title{
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  font-size:20px;
+  font-weight: 300;
+}
   .container {
     font-family: 'poppins';
     background:rgba(0, 0, 0, 0.3);
@@ -122,6 +128,9 @@
     input[type=submit]{
       padding: 12px 15px;
       font-size:15px;
+    }
+    #contact-title{
+      font-size:3vw;
     }
     
     /* .submit-row{

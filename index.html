@@ -34,10 +34,10 @@
                 <div class="menu-items">
                     <ul>
                         <li><a href="#" class="link">Home</a></li>
-                        <li><a href="#" class="link">Projects</a></li>
-                        <li><a href="#" class="link">Services</a></li>
-                        <li><a href="#" class="link">About</a></li>
-                        <li><a href="#" class="link">Contact</a></li>
+                        <li><a href="#projects" class="link">Projects</a></li>
+                        <li><a href="#services" class="link">Services</a></li>
+                        <li><a href="#about-kumudu" class="link">About</a></li>
+                        <li><a href="#contact-title" class="link">Contact</a></li>
                     </ul>         
                    
                 </div>
@@ -72,7 +72,7 @@
             </div>
         
             <div id="work">
-                <a href="#" class="work-btn">See my work</a>
+                <a href="#projects" class="work-btn">See my work</a>
             </div>
             
 
@@ -88,7 +88,7 @@
     <!-- End of top area -->
     
     <div class="about-area">
-        <h1>About me</h1>
+        <h1 id="about-kumudu">About me</h1>
         <div class="divider"></div>  
         
         <div class="about">
@@ -117,7 +117,7 @@
 
      <!-- SERVICES SECTION -->
      <div class="services-area">
-        <h1>What I do!</h1>
+        <h1 id="services">What I do!</h1>
         <div class="divider"></div> 
         
         <div class="services">
@@ -152,7 +152,7 @@
 
 
      <div class="slide-container swiper">
-        <h1>Projects</h1>
+        <h1 id="projects">Projects</h1>
         <div class="divider"></div> 
        
         <div class="slide-content">
@@ -239,6 +239,7 @@
 
     <!-- Contact area  -->
     <hr class="ruler contact-ruler">
+    <h3 id="contact-title">Contact me for anything! 😊</h3>
     <div class="container">
         
         <form action="#">
@@ -292,19 +293,22 @@
         <footer>
             <div class="footer-area">
                 <div class="border-bar"></div>
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                    <li><a href="#"><i class="fa fa-github-square"></i></a></li>
-                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                </ul>
-                <p class="info"><a href="#">Site information</a></p>
-                <p class="brand-details">© 2022 Kaytrun by Kumudu</p>
+                <div class="footer-details">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                    <p class="info"><a href="#">Site information</a></p>
+                    <p class="brand-details">© 2022 Kaytrun by Kumudu</p>
+                </div>
             </div>
         </footer>
         <!-- Back to top button -->
-        <button onclick="topClick()" id="toTop" title="Go to top" class="topBtn" style="display: block;"><i class="fa fa-arrow-circle-up"></i></button>
+        <button onclick="topClick() " id="toTop" title="Go to top" class="topBtn" style="display: block;"><i class="fa fa-arrow-circle-up"></i></button>
 </body>
 <script src="src/js/swipper-bundle.min.js"></script>
 <script src="src/js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </html>

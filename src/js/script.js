@@ -36,36 +36,45 @@ let topBtn = document.getElementById("toTop");
         function screenScroll(){
             if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
                 topBtn.style.display = "block";
+                
             }else{
                 topBtn.style.display = "none";
             }
         }
 
 function topClick(){
+        
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
+        // window.scrollTo({ top: 900, behavior: 'smooth' })
 }
+
+
 
 // Type writter
 
-const texts = ["Undergraduate student.", "Designer.", "Programmer."]
+const typewriter = ()=>{
+  const texts = ["Undergraduate student.", "Designer.", "Programmer."]
 
 let count = 0;
 let index = 0;
 let currentText = "";
 let letter = "";
 
-(function type(){
-  if(count === texts.length){
-    count =0;
-  }
-  currentText = texts[count];
-  letter = currentText.slice(0,++index);
+  (function type(){
+    if(count === texts.length){
+      count =0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0,++index);
 
-  document.querySelector(".typing").textContent = letter;
-  if(letter.length === currentText.length){
-    count++;
-    index = 0;
-  }
-  setTimeout(type,300);
-}());
+    document.querySelector(".typing").textContent = letter;
+    if(letter.length === currentText.length){
+      count++;
+      index = 0;
+    }
+    setTimeout(type,300);
+  }());
+}
+
+typewriter();
