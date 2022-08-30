@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css" integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.css" integrity="sha512-p++g4gkFY8DBqLItjIfuKJPFvTPqcg2FzOns2BNaltwoCOrXMqRIOqgWqWEvuqsj/3aVdgoEo2Y7X6SomTfUPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 
@@ -87,15 +88,15 @@
     </div>
     <!-- End of top area -->
     
-    <div class="about-area">
-        <h1 id="about-kumudu">About me</h1>
+    <div class="about-area" data-aos="fade-in" data-aos-duration="500" data-aos-once="true">
+        <h1 id="about-kumudu" data-aos="fade-down" >About me</h1>
         <div class="divider"></div>  
         
         <div class="about">
-            <div class="img">
+            <div class="img" data-aos="fade-right" data-aos-once="true" >
                 <img src="./src/images/me-two.png" alt="Kumudu's picture" title="Kumudu Wijewardhana">
             </div>
-            <div class="description">
+            <div class="description" data-aos="fade-left" data-aos-once="true">
                 <p>It is a long established fact that a reader will be 
                     distracted by the readable content of a page 
                     when looking at its layout. The point of using 
@@ -116,7 +117,7 @@
      <!--END OF THE ABOUT SECTION -->
 
      <!-- SERVICES SECTION -->
-     <div class="services-area">
+     <div class="services-area" data-aos="fade-left" data-aos-duration="500">
         <h1 id="services">What I do!</h1>
         <div class="divider"></div> 
         
@@ -151,7 +152,7 @@
      <!-- Projects area -->
 
 
-     <div class="slide-container swiper">
+     <div class="slide-container swiper" data-aos="fade-up" data-aos-duration="500">
         <h1 id="projects">Projects</h1>
         <div class="divider"></div> 
        
@@ -240,7 +241,7 @@
     	<!-- Contact area  -->
     <hr class="ruler contact-ruler">
     <h3 id="contact-title">Contact me for anything! 😊</h3>
-    <div class="container">
+    <div class="container" data-aos="fade-down" data-aos-duration="500">
         
         <form name="contactForm" action="#" onsubmit="return validateForm();" >
         
@@ -280,6 +281,7 @@
             </div>
             <div class="col-75">
               <textarea id="subject" name="subject" placeholder="Write your message" style="height:150px"></textarea>
+              <span class="name-error" id="subject-err">Message must be entered.</span>
             </div>
           </div>
           <div class="row submit-row">
@@ -312,5 +314,12 @@
 </body>
 <script src="src/js/swipper-bundle.min.js"></script>
 <script src="src/js/script.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+        once:true
+    });
+  </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </html>
