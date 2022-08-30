@@ -143,3 +143,10 @@ input[type=submit]:hover {
     font-size:3vw;
   }
 }   
+
+
+.name-error{
+  color:rgb(183, 66, 66);
+  display:none;
+  font-size:13px;
+}

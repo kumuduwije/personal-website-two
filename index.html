@@ -242,7 +242,7 @@
     <h3 id="contact-title">Contact me for anything! 😊</h3>
     <div class="container">
         
-        <form action="#">
+        <form name="contactForm" action="#" onsubmit="return validateForm();" >
         
           <div class="row">
             <h3>Contact me</h3>
@@ -251,7 +251,8 @@
               <label for="fname">Your name <span class="star">*</span></label>
             </div>
             <div class="col-75">
-              <input type="text" id="fname" name="firstname" placeholder="Enter your name"  required>
+              <input type="text" id="name" name="name" placeholder="Enter your name" >
+              <span class="name-error" id="name-err">Name must be filled.</span>
             </div>
           </div>
           <!-- <div class="row">
@@ -268,7 +269,8 @@
               <label for="lname">E-mail <span class="star">*</span></label>
             </div>
             <div class="col-75">
-              <input type="email" id="lname" name="lastname" placeholder="example@gmail.com" required>
+              <input type="email" id="email" name="email" placeholder="example@gmail.com" >
+              <span class="name-error" id="email-err">Email must be entered.</span>
             </div>
           </div>
 
@@ -277,7 +279,7 @@
               <label for="subject">Subject <span class="star">*</span></label>
             </div>
             <div class="col-75">
-              <textarea id="subject" name="subject" placeholder="Write your message" style="height:150px" required></textarea>
+              <textarea id="subject" name="subject" placeholder="Write your message" style="height:150px"></textarea>
             </div>
           </div>
           <div class="row submit-row">
