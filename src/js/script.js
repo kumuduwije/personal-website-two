@@ -112,15 +112,14 @@ function validateForm(event) {
   }
 }
 
-// $('#name').on('input', function (evt) {
-//   var value = evt.target.value
-  
-//   if (value.length === 0) {
-//     document.getElementById("name-err").style.display = "block";
-//     evt.target.className = ''
-    
-//     return false;
-//   }
-
-  
-// })
+// navbar hide when scrolling
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-120px";
+  }
+  prevScrollpos = currentScrollPos;
+}
