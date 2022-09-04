@@ -420,10 +420,6 @@ input[type=checkbox]{
         margin-top: 0;
     }
 
-    .description p {
-        font-size:25px;
-    }
-
     .img img {
         width:350px;
         height:350px;
@@ -434,7 +430,7 @@ input[type=checkbox]{
 
 }
 
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 600px){
 	.img img{
         margin-left: auto;
         margin-right: auto;
@@ -442,6 +438,26 @@ input[type=checkbox]{
     }
     .description p {
         font-size: 15px;
+        margin: 18px;
+    }
+    .about-area h1{
+        font-size: 35px;
+    }
+
+    .services-area h1{
+        font-size:35px;
+    }
+    /* .ruler{
+        width:80px;
+        border-bottom: 5px dotted #79018C;
+    } */
+}
+
+@media only screen and (max-width: 425px){
+	.img img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
     .ruler{
         width:70px;
@@ -459,7 +475,7 @@ input[type=checkbox]{
         height:250px;
     }
     .description p {
-        font-size: 18px;
+        font-size: 15px;
     }
     .ruler{
         width:70px;
@@ -468,28 +484,7 @@ input[type=checkbox]{
 }
 
 
-@media only screen and (max-width: 600px){
-	.img img{
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-    .description p {
-        font-size: 20px;
-        margin: 20px;
-    }
-    .about-area h1{
-        font-size: 35px;
-    }
 
-    .services-area h1{
-        font-size:35px;
-    }
-    /* .ruler{
-        width:80px;
-        border-bottom: 5px dotted #79018C;
-    } */
-}
 
 /* END OF THE ABOUT SECTION STYING */
 
