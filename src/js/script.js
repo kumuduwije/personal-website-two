@@ -54,7 +54,7 @@ function topClick(){
 // Type writter
 
 const typewriter = ()=>{
-  const texts = ["Undergraduate student.", "Designer.", "Programmer."]
+  const texts = ["Student.", "Designer.", "Programmer.","Photographer.", "Tech Lover."]
 
 let count = 0;
 let index = 0;
