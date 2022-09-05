@@ -32,15 +32,17 @@ var swiper = new Swiper(".slide-content", {
 // Back to top JS
 
 let topBtn = document.getElementById("toTop");
-        window.onscroll = function() {screenScroll()};
-        function screenScroll(){
-            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+window.onscroll = function() {screenScroll()};
+
+function screenScroll(){
+          if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
                 topBtn.style.display = "block";
                 
             }else{
                 topBtn.style.display = "none";
             }
         }
+        
 
 function topClick(){
         
@@ -122,4 +124,18 @@ var currentScrollPos = window.pageYOffset;
     document.getElementById("navbar").style.top = "-120px";
   }
   prevScrollpos = currentScrollPos;
+}
+
+
+//Auto Close Sidebar When click on Link
+
+const menu_items = document.getElementById("menu-items").getElementsByTagName('ul')[0];
+
+document.onclick = (e) => {
+  if(e.target.id != 'hamburger' && e.target.id != 'checkbox_toggle' ){
+    menu_items.style.display = 'none';
+  }
+  else{
+    menu_items.style.display = 'block';
+  }
 }

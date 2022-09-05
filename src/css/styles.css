@@ -616,7 +616,7 @@ input[type=checkbox]{
 
 /* Back to top button CSS */
 
-.topBtn {
+#toTop {
     display: none;
     position: fixed;
     bottom: 30px;
@@ -633,11 +633,11 @@ input[type=checkbox]{
 
 }
 
-.topBtn i  {
+#toTop i  {
     margin-top: 5px;
     font-size: 30px;
 }
-.topBtn:hover{
+#toTop:hover{
     background-color: purple;
     outline: 1px solid #0D0D0D;
 }
@@ -653,10 +653,13 @@ input[type=checkbox]{
     font-size: 30px;
 }
 .secret-para{
+    /* position: relative;
+    top: 50%; */
+    transform: translate(0, 40%);
     width:50%;
     height:50%;
     margin:  auto;
-    padding: 20px 0;
+  
     /* align-items: center;*/
     justify-content: center; 
     text-align: center;
@@ -664,6 +667,7 @@ input[type=checkbox]{
 .secret-para p{
     color:#fff;
     font-size:20px;
+    padding-top:10px;
     font-weight: 200;
     text-align:justify;
     margin-bottom: 20px;
@@ -699,8 +703,7 @@ input[type=checkbox]{
     .top-area{
         background-position:center;
     }
-
-
+ 
    .menu-items{ 
     z-index: 999;
     display:none;

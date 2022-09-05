@@ -30,9 +30,9 @@
             <div class="menu">
                 <!-- USING CHECKBOX HACK -->
                 <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                <label for="checkbox_toggle" class="hamburger" id="hamburger" >&#9776;</label>
 
-                <div class="menu-items" data-aos="fade-left" data-aos-duration="1000" >
+                <div class="menu-items" id="menu-items" data-aos="fade-left" data-aos-duration="1000" >
                     <ul>
                         <li><a href="#home" class="link">Home</a></li>
                         <li><a href="#projects" class="link">Projects</a></li>
@@ -45,6 +45,7 @@
                 
                 
             </div>
+
         </nav> <!--END OF THE NAVBAR CODE-->
 
         <!-- Begining of hero section -->
@@ -299,9 +300,10 @@
                     <p class="brand-details">© 2022 Kaytrun by Kumudu</p>
                 </div>
             </div>
+                <!-- Back to top button -->
+                <button onclick="topClick() " id="toTop" title="Go to top" class="topBtn" style="display:block;"><i class="fa fa-arrow-circle-up"></i></button>
         </footer>
-        <!-- Back to top button -->
-        <button onclick="topClick() " id="toTop" title="Go to top" class="topBtn" style="display: block;"><i class="fa fa-arrow-circle-up"></i></button>
+
 </body>
 <script src="src/js/swipper-bundle.min.js"></script>
 <script src="src/js/script.js"></script>
