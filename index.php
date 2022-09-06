@@ -1,3 +1,33 @@
+<?php
+
+    $status = " ";
+    //check whether user sumbit the form
+    if(isset($_POST['send'])){
+    $full_name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+
+    $to = 'kumudu@kaytrun.com';
+    $mail_subject = 'Message from Kaytrun!';
+    $email_body = "Message from Contact Us Page of Kaytrun: <br>";
+    $email_body .= "<b>From:</b>{$full_name}<br>";
+    $email_body .= "<b>Subject</b><br>" . nl2br(strip_tags($subject));
+
+    $header = "From: {$email} \r\nContent-Type: text/html;";
+
+    $mail_result = mail($to, $mail_subject, $email_body, $header);
+
+
+    if($mail_result){
+
+        $status = '<p class = "success">Message sent successfully.</p>';
+    }else{
+        $status = '<p class = "error">Error: Message was not send.</p>';
+    }
+    
+
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -236,37 +266,30 @@
     	<!-- Contact area  -->
     <hr class="ruler contact-ruler">
     <h3 id="contact-title" data-aos="fade-down" data-aos-duration="1000">Contact me for anything! 😊</h3>
-    <div class="container" data-aos="fade-down" data-aos-duration="1000">
+    <div class="container">
         
-        <form name="contactForm" action="#" onsubmit="return validateForm();" >
+        <form action="index.php" id="contact-form" method="POST">
         
           <div class="row">
             <h3>Contact me</h3>
           <div class="divider"></div>
+            <?php echo $status; ?>
             <div class="col-25">
-              <label for="fname">Your name <span class="star">*</span></label>
+              <label for="fname">Full Name <span class="star">*</span></label>
             </div>
             <div class="col-75">
-              <input type="text" id="name" name="name" placeholder="Enter your name" >
-              <span class="name-error" id="name-err">Name must be filled.</span>
+              <input type="text" id="fname" name="name" placeholder="Enter your full name" required>
             </div>
           </div>
-          <!-- <div class="row">
-            <div class="col-25">
-              <label for="lname">Last Name <span class="star">*</span></label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="lname" name="lastname" placeholder="Enter your last name" required>
-            </div>
-          </div> -->
+
       
           <div class="row">
             <div class="col-25">
               <label for="lname">E-mail <span class="star">*</span></label>
             </div>
+
             <div class="col-75">
-              <input type="email" id="email" name="email" placeholder="example@gmail.com" >
-              <span class="name-error" id="email-err">Email must be entered.</span>
+              <input type="email" id="email" name="email" placeholder="Enter your e-mail" required>
             </div>
           </div>
 
@@ -275,12 +298,11 @@
               <label for="subject">Subject <span class="star">*</span></label>
             </div>
             <div class="col-75">
-              <textarea id="subject" name="subject" placeholder="Write your message" style="height:150px"></textarea>
-              <span class="name-error" id="subject-err">Message must be entered.</span>
+              <textarea id="subject" name="subject" placeholder="Write your message" style="height:150px" required></textarea>
             </div>
           </div>
           <div class="row submit-row">
-            <input type="submit" value="Send message">
+            <input type="submit" value="Send message" name="send">
           </div>
         </form>
       </div>
@@ -310,7 +332,9 @@
 </body>
 <script src="src/js/swipper-bundle.min.js"></script>
 <script src="src/js/script.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="src/js/form.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     //https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHRVRk1UZ3NEZnNLb1Q1VmhGY0JZT1FVbUxKd3xBQ3Jtc0tsbi1SaEJrNEZtN3pjcENoU1h2YXozX3JPbVJHaVNRdlBMVzNDUFRIWERXd1RMX2dNSEJISm5VUWM3X3IxRGYydlZiSGNxLXpNbjZ0ZTk0ZmZWSU54YWFZZWZfb2g4YjV2X1NoQkxXSDhhdG9FOWZtZw&q=https%3A%2F%2Fgithub.com%2Fmichalsnik%2Faos&v=0kmFlBJIUkQ

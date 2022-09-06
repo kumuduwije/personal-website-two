@@ -81,39 +81,6 @@ let letter = "";
 
 typewriter();
 
-
-//Form validation 
-
-function validateForm(event) {
-  // event.preventDefault();
-  let namestatus = document.forms["contactForm"]["name"].value;
-  let mailstatus = document.forms["contactForm"]["email"].value;
-  let subjectstatus = document.forms["contactForm"]["subject"].value;
-  if (namestatus == "") {
-    
-    // alert("Name must be filled out");
-    document.getElementById("name-err").style.display = "block";
-    document.getElementById("name").style.border = "0.5px solid rgb(183, 66, 66)";
-  }
-
- 
-
-  if(mailstatus == "") {
-    document.getElementById("email-err").style.display = "block";
-    document.getElementById("email").style.border = "0.5px solid rgb(183, 66, 66)";
-  }
-
-  if(subjectstatus == "") {
-    document.getElementById("subject-err").style.display = "block";
-    document.getElementById("subject").style.border = "0.5px solid rgb(183, 66, 66)";
-  }
-  
-
-  if(mailstatus == "" || namestatus == "") {
-    return false;
-  }
-}
-
 // navbar hide when scrolling
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
