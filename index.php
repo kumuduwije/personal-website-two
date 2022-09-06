@@ -302,7 +302,7 @@
             </div>
           </div>
           <div class="row submit-row">
-            <input type="submit" value="Send message" name="send">
+            <input id="submit-btn" type="submit" value="Send message" name="send">
           </div>
         </form>
       </div>
@@ -330,17 +330,21 @@
         </footer>
 
 </body>
-<script src="src/js/swipper-bundle.min.js"></script>
-<script src="src/js/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-<script src="src/js/form.js"></script>
+
+
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
+<script>
     //https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHRVRk1UZ3NEZnNLb1Q1VmhGY0JZT1FVbUxKd3xBQ3Jtc0tsbi1SaEJrNEZtN3pjcENoU1h2YXozX3JPbVJHaVNRdlBMVzNDUFRIWERXd1RMX2dNSEJISm5VUWM3X3IxRGYydlZiSGNxLXpNbjZ0ZTk0ZmZWSU54YWFZZWZfb2g4YjV2X1NoQkxXSDhhdG9FOWZtZw&q=https%3A%2F%2Fgithub.com%2Fmichalsnik%2Faos&v=0kmFlBJIUkQ
     AOS.init({
         once:true
     });
   </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="src/js/swipper-bundle.min.js"></script>
+<script src="src/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="src/js/form.js"></script>
+
+
 </html>

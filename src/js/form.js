@@ -30,3 +30,7 @@ $("#contact-form").validate({
     }
 });
 
+$("#contact-form").submit(function(e){
+    e.preventDefault();
+    console.log('not submitted');
+  });
