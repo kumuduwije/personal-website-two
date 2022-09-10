@@ -93,16 +93,24 @@ var currentScrollPos = window.pageYOffset;
   prevScrollpos = currentScrollPos;
 }
 
-
 //Auto Close Sidebar When click on Link
 
 const menu_items = document.getElementById("menu-items").getElementsByTagName('ul')[0];
+const hamburger = document.getElementById("hamburger")
 
 document.onclick = (e) => {
-  if(e.target.id != 'hamburger' && e.target.id != 'checkbox_toggle' ){
-    menu_items.style.display = 'none';
+  if(window.innerWidth <= 768){
+    if(e.target.id != 'hamburger' && e.target.id != 'checkbox_toggle' ){
+      menu_items.style.display = 'none';
+    }
+    else{
+      menu_items.style.display = 'block';
+    }
   }
-  else{
-    menu_items.style.display = 'block';
-  }
+ 
 }
+
+
+
+
+

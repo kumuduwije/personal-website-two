@@ -47,11 +47,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css" integrity="sha512-nS1/hdh2b0U8SeA8tlo7QblY6rY6C+MgkZIeRzJQQvMsFfMQFUKp+cgMN2Uuy+OtbQ4RoLMIlO2iF7bIEY3Oyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.css" integrity="sha512-p++g4gkFY8DBqLItjIfuKJPFvTPqcg2FzOns2BNaltwoCOrXMqRIOqgWqWEvuqsj/3aVdgoEo2Y7X6SomTfUPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="src/js/swipper-bundle.min.js" ></script>
 </head>
 <body>
 
     <!-- top section -->
-    <div class="top-area">
+    <div class="top-area" id="home" >
         <nav class="navbar" id="navbar">
             <div class="logo" data-aos="fade-right" data-aos-duration="1200" >
                 Kaytrun
@@ -79,7 +80,7 @@
         </nav> <!--END OF THE NAVBAR CODE-->
 
         <!-- Begining of hero section -->
-        <div id="home" class="hero-section">
+        <div class="hero-section">
             <div class="hero-titles">
                 <div class="hello" data-aos="fade-down" data-aos-duration="1000" >Hello I'm</div>
                 <div class="my-name" ><h1 data-aos="fade-up" data-aos-duration="1200" >Kumudu Wijewardhana</h1>
@@ -266,7 +267,7 @@
     	<!-- Contact area  -->
     <hr class="ruler contact-ruler">
     <h3 id="contact-title" data-aos="fade-down" data-aos-duration="1000">Contact me for anything! 😊</h3>
-    <div class="container">
+    <div class="container" data-aos="fade-right" data-aos-duration="1500">
         
         <form action="index.php" id="contact-form" method="POST">
         
@@ -316,10 +317,10 @@
                 <div class="border-bar"></div>
                 <div class="footer-details">
                     <ul class="social-icons">
-                        <li><a href="https://www.facebook.com/kumuduwije899" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/kumudu-wijewardhana-9b496b170/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-                        <li><a href="https://github.com/kumuduwije/" target="_blank"><i class="fa fa-github-square"></i></a></li>
-                        <li><a href="https://www.instagram.com/kumudu_i_/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/kumuduwije899" target="_blank"><i class="fa fa-facebook-square" data-aos="fade-down" data-aos-duration="2000"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/kumudu-wijewardhana-9b496b170/" target="_blank"><i class="fa fa-linkedin-square" data-aos="fade-down" data-aos-duration="2200"></i></a></li>
+                            <li><a href="https://github.com/kumuduwije/" target="_blank"><i class="fa fa-github-square" data-aos="fade-down" data-aos-duration="2400"></i></a></li>
+                            <li><a href="https://www.instagram.com/kumudu_i_/" target="_blank"><i class="fa fa-instagram" data-aos="fade-down" data-aos-duration="2600"></i></a></li>
                     </ul>
                     <p class="info"><a href="./site_info.html">Site information</a></p>
                     <p class="brand-details">© 2022 Kaytrun by Kumudu</p>
@@ -331,6 +332,7 @@
 
 </body>
 
+<script src="src/js/script.js"></script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
@@ -340,11 +342,12 @@
     });
   </script>
 
-<script src="src/js/swipper-bundle.min.js"></script>
-<script src="src/js/script.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 <script src="src/js/form.js"></script>
+
 
 
 </html>
